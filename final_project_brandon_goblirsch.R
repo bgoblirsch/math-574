@@ -65,6 +65,6 @@ plot(bayes_lm, pars = c("log_minplaytime", "log_maxplaytime", "minplayers", "max
      prob = 0.95) +
   ggtitle("Posterior Distributions of Regression Coefficients")
 
-
+# PPC Plot to chekc model's goodness of fit
 y_rep <- posterior_predict(bayes_lm)
 ppc_dens_overlay(y = games$average, yrep = y_rep[1:200, ])
